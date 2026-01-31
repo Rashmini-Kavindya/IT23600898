@@ -13,25 +13,30 @@ test.describe('Singlish to Sinhala Automation', () => {
       const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
       await inputBox.fill('');
       
-      // අකුරෙන් අකුර type කිරීම
-      await inputBox.pressSequentially(data.input, { delay: 100 });
+      // Speed eka poddak adu karala type karamu
+      await inputBox.pressSequentially(data.input, { delay: 150 });
 
       const outputContainer = page.locator('div.w-full.h-80.whitespace-pre-wrap').first();
 
-      // සිංහල අකුරු එනකම් පොඩ්ඩක් ඉන්න
-      await expect(outputContainer).toContainText(/[\u0D80-\u0DFF]/, { timeout: 20000 });
+      // Output eka ena kan poddak wela balan inna
+      await page.waitForTimeout(2000); 
 
-      // මෙතනදී අපි නොපෙනෙන අකුරු අයින් කරලා සසඳනවා
       const actualOutput = (await outputContainer.innerText()).trim();
+
+      // Debugging logs - GitHub logs wala balanna
+      console.log(`ID: ${data.id}`);
+      console.log(`Input: ${data.input}`);
+      console.log(`Expected: ${data.expected.trim()}`);
+      console.log(`Actual: ${actualOutput}`);
+
+      // 100% samanada balanne nathuwa, expected kalla thiyenawada balamu
+      // Me widiya Unicode issues waladi godak safe.
+      const isMatch = actualOutput.includes(data.expected.trim());
       
-      // Normalize function එකක් පාවිච්චි කරමු invisible characters අයින් කරන්න
-      const cleanActual = actualOutput.replace(/[\u200B-\u200D\uFEFF]/g, '');
-      const cleanExpected = data.expected.trim().replace(/[\u200B-\u200D\uFEFF]/g, '');
-
-      console.log(`ID: ${data.id} | Expected: ${cleanExpected} | Actual: ${cleanActual}`);
-
-      // දැන් සසඳන්න
-      expect(cleanActual).toContain(cleanExpected);
+      if (!isMatch) {
+        // Match une naththan force fail karanna reason eka ekka
+        throw new Error(`Mismatch! Expected: ${data.expected.trim()} but got: ${actualOutput}`);
+      }
     });
   });
 });
