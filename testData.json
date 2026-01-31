@@ -29,7 +29,6 @@
     "expected": "අපි හෙට ගෙදර යනවා",
     "result": "PASS"
   },
-
   {
     "id": "Neg_Fun_0006",
     "input": "machan mata meeting eke zoom link eka evanna plz",
@@ -39,25 +38,25 @@
   {
     "id": "Neg_Fun_0007",
     "input": "thx oyaa help kalaata",
-    "expected": "thanks ඔයා help කළාට",
+    "expected": "thx ඔයා help කළාට",
     "result": "FAIL"
   },
   {
     "id": "Neg_Fun_0008",
     "input": "mama gedharayanavaa",
-    "expected": "මම ගෙදර යනවා",
+    "expected": "මම ගෙදරයනවා",
     "result": "FAIL"
   },
   {
     "id": "Neg_Fun_0009",
     "input": "oya enne da?",
-    "expected": "ඔයා එන්නේද?",
+    "expected": "ඔයා එන්නේ ද?",
     "result": "FAIL"
   },
   {
     "id": "Neg_Fun_0010",
     "input": "api tomorrow office yamu",
-    "expected": "අපි හෙට office යමු",
+    "expected": "අපි tomorrow office යමු",
     "result": "FAIL"
   }
 ]
