@@ -6,40 +6,37 @@ test.describe('Singlish to Sinhala Automation', () => {
   testData.forEach((data) => {
     test(`Testing Case: ${data.id}`, async ({ page }) => {
 
+      // Page එක load වෙනකම් බලා සිටීම
       await page.goto('https://www.swifttranslator.com/', {
-        waitUntil: 'domcontentloaded',
+        waitUntil: 'networkidle', // මුළු page එකම load වෙනකම් ඉන්න
       });
 
-   
       const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
-      await inputBox.click();
-      await inputBox.fill('');
-
-    
-      await inputBox.type(data.input, { delay: 150 });
-
       
-      const outputContainer = page
-        .getByText('Sinhala', { exact: true })
-        .locator('xpath=ancestor::div[contains(@class,"grid")]')
-        .locator('div.w-full.h-80.whitespace-pre-wrap')
-        .first();
+      // කලින් තිබ්බ text clear කරගැනීම
+      await inputBox.fill('');
+      
+      // අකුරෙන් අකුර type කිරීම (delay එක CI වලට ඉතා වැදගත්)
+      await inputBox.pressSequentially(data.input, { delay: 200 });
 
-    
-      await expect(outputContainer).toContainText(
-        /[\u0D80-\u0DFF]/,
-        { timeout: 20000 }
-      );
+      // Output එක ලැබෙන div එක සරලව තෝරා ගැනීම
+      const outputContainer = page.locator('div.w-full.h-80.whitespace-pre-wrap').first();
 
-      await page.waitForTimeout(500);
+      // සිංහල අකුරු ලැබෙනකම් මුලින්ම check කරන්න
+      await expect(outputContainer).toContainText(/[\u0D80-\u0DFF]/, { timeout: 30000 });
 
+      // Assertion: ලැබුණු output එක අපේ expected අගයට සමානදැයි බැලීම
+      // .toHaveText පාවිච්චි කිරීමෙන් Playwright එක මීට වඩා බලාපොරොත්තු සහගතව වැඩ කරයි
+      await expect(outputContainer).toContainText(data.expected.trim(), { 
+        timeout: 15000 
+      });
+
+      // Debugging logs (GitHub Actions logs වල බලාගත හැක)
       const actualOutput = (await outputContainer.innerText()).trim();
-
-      console.log(`ID: ${data.id}`);
+      console.log(`Case ID : ${data.id}`);
+      console.log(`Input   : ${data.input}`);
       console.log(`Expected: ${data.expected}`);
       console.log(`Actual  : ${actualOutput}`);
-
-      expect(actualOutput).toContain(data.expected.trim());
     });
   });
 
