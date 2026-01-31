@@ -6,38 +6,32 @@ test.describe('Singlish to Sinhala Automation', () => {
   testData.forEach((data) => {
     test(`Testing Case: ${data.id}`, async ({ page }) => {
 
-      // Page එක load වෙනකම් බලා සිටීම
       await page.goto('https://www.swifttranslator.com/', {
-        waitUntil: 'networkidle', // මුළු page එකම load වෙනකම් ඉන්න
+        waitUntil: 'networkidle',
       });
 
       const inputBox = page.getByPlaceholder('Input Your Singlish Text Here.');
-      
-      // කලින් තිබ්බ text clear කරගැනීම
       await inputBox.fill('');
       
-      // අකුරෙන් අකුර type කිරීම (delay එක CI වලට ඉතා වැදගත්)
-      await inputBox.pressSequentially(data.input, { delay: 200 });
+      // අකුරෙන් අකුර type කිරීම
+      await inputBox.pressSequentially(data.input, { delay: 100 });
 
-      // Output එක ලැබෙන div එක සරලව තෝරා ගැනීම
       const outputContainer = page.locator('div.w-full.h-80.whitespace-pre-wrap').first();
 
-      // සිංහල අකුරු ලැබෙනකම් මුලින්ම check කරන්න
-      await expect(outputContainer).toContainText(/[\u0D80-\u0DFF]/, { timeout: 30000 });
+      // සිංහල අකුරු එනකම් පොඩ්ඩක් ඉන්න
+      await expect(outputContainer).toContainText(/[\u0D80-\u0DFF]/, { timeout: 20000 });
 
-      // Assertion: ලැබුණු output එක අපේ expected අගයට සමානදැයි බැලීම
-      // .toHaveText පාවිච්චි කිරීමෙන් Playwright එක මීට වඩා බලාපොරොත්තු සහගතව වැඩ කරයි
-      await expect(outputContainer).toContainText(data.expected.trim(), { 
-        timeout: 15000 
-      });
-
-      // Debugging logs (GitHub Actions logs වල බලාගත හැක)
+      // මෙතනදී අපි නොපෙනෙන අකුරු අයින් කරලා සසඳනවා
       const actualOutput = (await outputContainer.innerText()).trim();
-      console.log(`Case ID : ${data.id}`);
-      console.log(`Input   : ${data.input}`);
-      console.log(`Expected: ${data.expected}`);
-      console.log(`Actual  : ${actualOutput}`);
+      
+      // Normalize function එකක් පාවිච්චි කරමු invisible characters අයින් කරන්න
+      const cleanActual = actualOutput.replace(/[\u200B-\u200D\uFEFF]/g, '');
+      const cleanExpected = data.expected.trim().replace(/[\u200B-\u200D\uFEFF]/g, '');
+
+      console.log(`ID: ${data.id} | Expected: ${cleanExpected} | Actual: ${cleanActual}`);
+
+      // දැන් සසඳන්න
+      expect(cleanActual).toContain(cleanExpected);
     });
   });
-
 });
