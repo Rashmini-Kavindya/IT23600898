@@ -7,56 +7,206 @@
   },
   {
     "id": "Pos_Fun_0002",
-    "input": "mama gedhara yanawa",
-    "expected": "මම ගෙදර යනවා",
+    "input": "machan mata adha meeting ekee Zoom link eka email ekak vidhihata evanna puLuvandha? Please send it before 3pm. Mama office yanna kalin check karanna oonea. Email ekak evanna amaarunam WhatsApp msg ekak dhaapan. Thx!",
+    "expected": "මචන් මට අද meeting එකේ Zoom link එක email එකක් විදිහට එවන්න පුළුවන්ද? Please send it before 3pm. මම office යන්න කලින් check කරන්න ඕනේ. Email එකක් එවන්න අමාරුනම් WhatsApp ම්ස්ග් එකක් දාපන්. ථx!!",
     "result": "PASS"
   },
   {
     "id": "Pos_Fun_0003",
-    "input": "subha dhavasak",
-    "expected": "සුභ දවසක්",
+    "input": "suba raethriyak machan!",
+    "expected": "සුබ රාත්‍රියක් මචන්!",
     "result": "PASS"
   },
   {
     "id": "Pos_Fun_0004",
-    "input": "mata udhavvak karanna puluvandha?",
-    "expected": "මට උදව්වක් කරන්න පුළුවන්ද?",
+    "input": "mata paaraataa kanna oonee.",
+    "expected": "මට පාරාටා කන්න ඕනේ.",
     "result": "PASS"
   },
   {
     "id": "Pos_Fun_0005",
-    "input": "api heta gedhara yanavaa",
-    "expected": "අපි හෙට ගෙදර යනවා",
+    "input": "oyaa dhaen galkisseedha inne ?",
+    "expected": "ඔයා දැන් ගල්කිස්සේද ඉන්නේ?",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0006",
+    "input": "adha hodhata vahinava.",
+    "expected": "අද  හොඳට වහිනවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0007",
+    "input": "ov, eeka hari.",
+    "expected": "ඔව්, ඒක හරි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0008",
+    "input": "mama udhaeesana hathata paasal yanna ready venavaa.",
+    "expected": "මම උදෑසන හතට පාසල් යන්න ready වෙනවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0009",
+    "input": "karuNaakaralaa office ekee documents tika mata email karanna.",
+    "expected": "කරුණාකරලා office එකේ documents ටික මට email කරන්න.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0010",
+    "input": "vaessa unath api ani vaaryayenma class yanna oonee.",
+    "expected": "වැස්ස වුණත් අපි අනිවාර්යයෙන්ම class යන්න ඕනේ.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0011",
+    "input": "Zoom meeting ekee link eka WhatsApp karanna puLuvandha?",
+    "expected": "Zoom meeting එකේ link එක WhatsApp කරන්න පුළුවන්ද?",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0012",
+    "input": "mama heta udhaema kaeema kanna ennam.",
+    "expected": "මම හෙට උදේම කෑම කන්න එන්නම්.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0013",
+    "input": "mama saamaanYyen udheema avadhi velaa vathura viidhuuru dhekak bonavaa. iita passe paara aayinee podi exercise ekak karalaa gedhara avith naalaa ready velaa office yanna pitath venavaa. magadhi mata shamalva hamba venavaa. api dhennaa ekatama bus ekee gihin vaedata yanavaa.",
+    "expected": "මම සාමාන්‍යයෙන් උදේම අවදි වෙලා වතුර වීදූරු දෙකක් බොනවා. ඊට පස්සෙ පාර ආයිනේ පොඩි exercise එකක් කරලා ගෙදර අවිත් නාලා ready වෙලා office යන්න පිටත් වෙනවා. මගදි මට ශමල්ව හම්බ වෙනවා. අපි දෙන්නා එකටම bus එකේ ගිහින් වැඩට යනවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0014",
+    "input": "karuNaakaralaa mevaagee printout thunak aran files thunakata dhaanna. eeta passe eevaagee scan copy ekak aran magee email ekata dhenna. oyaata monavaahari prashnayak thiyenavaanam magee WhatsApp ekata message ekak dhaanna. mama meeting eka ivara velaa balannam.",
+    "expected": "කරුණාකරලා මෙවාගේ printout තුනක් අරන් files තුනකට දාන්න. ඒට පස්සෙ ඒවාගේ scan copy එකක් අරන් මගේ email එකට දෙන්න. ඔයාට මොනවාහරි ප්‍රශ්නයක් තියෙනවානම් මගේ WhatsApp එකට message එකක් දාන්න. මම meeting එක ඉවර වෙලා බලන්නම්.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0015",
+    "input": "mata adha badu vagayak ganna oonee. list ekee thiyennee haal kg 5, siini kg 2 saha parippu g 500k. meevaa ganna kadeeta yana paara kiyannako. issarahata gihin vama paththata harenna. iita passe thava tikak dhura yanakota loku kadayak hamba veyi.",
+    "expected": "මට අද බඩු වගයක් ගන්න ඕනේ. list එකේ තියෙන්නේ හාල් kg 5, සීනි kg 2 සහ පරිප්පු g 500ක්. මේවා ගන්න කඩේට යන පාර කියන්නකො. ඉස්සරහට ගිහින් වම පත්තට හරෙන්න. ඊට පස්සෙ තව ටිකක් දුර යනකොට ලොකු කඩයක් හම්බ වෙයි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0016",
+    "input": "mama saeehena velaavak balan hitiyaa eth oyaa thamaa aavee naee. maarga thadhabadhaya thiyenavaanam mata kalin kiyanna thibunaa. dhaen godak rae velaa nisaa mata thava velaa inna baee. mama yanavaa, api passe kathaa karamu. tharaha venna epaa.",
+    "expected": "මම සෑහෙන වෙලාවක් බලන් හිටියා එත් ඔයා තමා ආවේ නෑ. මාර්ග තදබදය තියෙනවානම් මට කලින් කියන්න තිබුනා. දැන් ගොඩක් රැ වෙලා නිසා මට තව වෙලා ඉන්න බෑ. මම යනවා, අපි පස්සෙ කතා කරමු. තරහ වෙන්න එපා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0017",
+    "input": "Mama hamadama ude 6ta nagitinawa. Eeta passe muna sodagena, dath madala tea ekak bonawa. Amma udeta bath uyanawa. Mama 7.30 wenakota office yanna lasthi wenawa. Bus eke yanakota godak senaga innawa. Samahara welawata seat ekak labenne na. Office ekata gihin mama emails check karanawa. Eeta passe mage wada patan gannawa. Dawal 12.30ta api lunch gannawa. Hawasa 5 wenakota wada iwara wela gedara enawa. Gedara awith tea ekak bila, TV balanawa. Raa 8ta withara dinner aragena, pothak kiyawala nida gannawa. Me mage samanya dawasa gathawena widihai.",
+    "expected": "මම හැමදාම උදේ 6ට නැගිටිනවා. ඊට පස්සේ මූණ සෝදාගෙන, දත් මැදලා tea එකක් බොනවා. අම්මා උදේට බත් උයනවා. මම 7.30 වෙනකොට office යන්න ලෑස්ති වෙනවා. Bus එකේ යනකොට ගොඩක් සෙනඟ ඉන්නවා. සමහර වෙලාවට seat එකක් ලැබෙන්නේ නෑ. Office එකට ගිහින් මම emails check කරනවා. ඊට පස්සේ මගේ වැඩ පටන් ගන්නවා. දවල් 12.30ට අපි lunch ගන්නවා. හවස 5 වෙනකොට වැඩ ඉවර වෙලා ගෙදර එනවා. ගෙදර ඇවිත් tea එකක් බීලා, TV බලනවා. රෑ 8ට විතර dinner අරගෙන, පොතක් කියවලා නිදා ගන්නවා. මේ මගේ සාමාන්‍ය දවස ගතවෙන විදිහයි. නිවාඩු දවස් වලට නම් අපි වෙන ගමන් යනවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0018",
+    "input": "api adha campus yamu, ITPM lab sessions saha tutorials patan gannava adha, apita lecturers la samaga discuss karanna puluvan apee projects gaena. havasata assignment1 eka complete karalaa submit karannath thiyenavaa naethnam lakuNu naethi veyi.",
+    "expected": "අපි අද campus යමු, ITPM lab sessions සහ tutorials පටන් ගන්නව අද, අපිට lecturers ල සමග discuss කරන්න පුලුවන් අපේ projects ගැන. හවසට assignment1 එක complete කරලා submit කරන්නත් තියෙනවා නැත්නම් ලකුණු නැති වෙයි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0019",
+    "input": "mama rathu paatata aasayi.",
+    "expected": "මම රතු පාටට ආසයි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0020",
+    "input": "heta api koheehari yamu dha?",
+    "expected": "හෙට අපි කොහේහරි යමු ද?",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0021",
+    "input": "api heta havasata pansal yamu. thel,mal,pahanthira,hadhunkuuru aran enna naethnam apita parakku veyi.",
+    "expected": "අපි හෙට හවසට පන්සල් යමු. තෙල්,මල්,පහන්තිර,හදුන්කූරු අරන් එන්න නැත්නම් අපිට පරක්කු වෙයි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0022",
+    "input": "api kohomahari tika tika mee vaedee ivara karagamu.",
+    "expected": "අපි කොහොමහරි ටික ටික මේ වැඩේ ඉවර කරගමු.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0023",
+    "input": "akkaa iiye gedhara gihin thiyennee kudee dhaalaa.",
+    "expected": "අක්කා ඊයෙ ගෙදර ගිහින් තියෙන්නේ කුඩේ දාලා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Pos_Fun_0024",
+    "input": "karuNaakarala mata oyage WhatsApp number eka dhenna puluvandha?",
+    "expected": "කරුණාකරල මට ඔයගෙ WhatsApp number එක දෙන්න පුලුවන්ද?",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_Fun_0001",
+    "input": "mama dhaen nidhivaenava.",
+    "expected": "මම දැන් නිදාගන්නවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_Fun_0002",
+    "input": "matabathdhenna",
+    "expected": "මට බත් දෙන්න",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_Fun_0003",
+    "input": "api heta handhaevae Kandy yanna plan ekak dhaamu.",
+    "expected": "අපි හෙට හවස Kandy යන්න plan එකක් දාමු.",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_Fun_0004",
+    "input": "maarga thadhabadhaya nisaa office enna late venavaa.",
+    "expected": "මාර්ග තදබදය නිසා office එන්න late වෙනවා.",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_Fun_0005",
+    "input": "api ena sathiyee Nuwara Eliya yanna kathaava thiyenavaa. ehee godhak vaessa nisaa api raincoat saha sweater aran yanna oonee. oyaagee yaluvoo enavaanam mata vahaama kiynna. api van ekak book karanna oonee nisaa kattiya keeyak enavadha kiyala hariyatama kiyanna.",
+    "expected": "අපි එන සතියේ නුවර එළියේ යන්න කතාවක් තියෙනවා. එහේ ගොඩක් වැස්ස නිසා අපි raincoat සහ sweater අරන් යන්න ඕනේ. ඔයාගේ යලුවෝ එනවානම් මට ඉක්මනට කියන්න. අපි van එකක් book කරන්න ඕනේ නිසා කට්ටිය කීයක් එනවද කියල හරියටම කියන්න.",
     "result": "PASS"
   },
   {
     "id": "Neg_Fun_0006",
-    "input": "machan mata meeting eke zoom link eka evanna plz",
-    "expected": "මචන් මට meeting එකේ zoom link එක එවන්න plz",
-    "result": "FAIL"
+    "input": "Ella kiyanne shrii laQQnkaavee thiyena hari lassanayi saha popular hill country tourist destination ekak. Me place eka cool climate eka, Green tea plantations, mountains saha foggy views nisaa hari famous. Ella Rock, Little Adam’s Peak saha Nine Arches Bridge wage places visit karanna puluvan. Nature lovers lata saha relax venna one ayata Ella kiyannee perfect place ekak.",
+    "expected": "Ella කියන්නෙ ශ්‍රී ලංකාවේ තියෙන හරි ලස්සන සහ popular hill country tourist destination එකක්. මේ place එක cool climate එක, Green tea plantations, mountains සහ foggy views නිසා හරි famous. Ella Rock, Little Adam’s Peak සහ Nine Arches Bridge වගේ places visit කරන්න පුළුවන්. Nature lovers ලට සහ relax වෙන්න ඕන අයට Ella කියන්නේ perfect place එකක්.",
+    "result": "PASS"
   },
   {
     "id": "Neg_Fun_0007",
-    "input": "thx oyaa help kalaata",
-    "expected": "thx ඔයා help කළාට",
-    "result": "FAIL"
+    "input": "magee gedara podibalupaetiyek innavaaathdhenna",
+    "expected": "මගේ ගෙදර පොඩි බලු පැටියෙක් ඉන්නවා.",
+    "result": "PASS"
   },
   {
     "id": "Neg_Fun_0008",
-    "input": "mama gedharayanavaa",
-    "expected": "මම ගෙදරයනවා",
-    "result": "FAIL"
+    "input": "api heta saththu waththa  balanna yanawaa",
+    "expected": "අපි හෙට සත්තු වත්ත  බලන්න යනවා",
+    "result": "PASS"
   },
   {
     "id": "Neg_Fun_0009",
-    "input": "oya enne da?",
-    "expected": "ඔයා එන්නේ ද?",
-    "result": "FAIL"
+    "input": "mama vaediya aasa naee seLLam karanna.",
+    "expected": "මම වැඩිය ආස නෑ සෙල්ලම් කරන්න.",
+    "result": "PASS"
   },
   {
     "id": "Neg_Fun_0010",
-    "input": "api tomorrow office yamu",
-    "expected": "අපි tomorrow office යමු",
-    "result": "FAIL"
+    "input": "adha havasa ahasa thaebilipatayi.",
+    "expected": "අද හවස අහස තැඹිලි පාටයි.",
+    "result": "PASS"
+  },
+  {
+    "id": "Neg_UI_0001",
+    "input": "මම අද ගෙදර යන්නේ අම්මත් එක්ක.",
+    "expected": "mama adha gedhara yannee ammath ekka.",
+    "result": "PASS"
   }
 ]
