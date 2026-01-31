@@ -1,10 +1,10 @@
 Singlish to Sinhala Translation Automation (TypeScript)
 This project is a professional automated testing suite developed using Playwright and TypeScript. It validates the translation accuracy of the Swift Translator web platform.
 
- Project Objective
+🎯 Project Objective
 The goal is to ensure that phonetic Singlish input is correctly transformed into Sinhala script through a Data-Driven Testing (DDT) approach.
 
- Key Technical Solutions (The Fixes)
+🛠️ Key Technical Solutions (The Fixes)
 During the initial execution, the test captured English text instead of Sinhala. I implemented the following best practices to solve this:
 
 1. Human-like Sequential Typing
@@ -20,14 +20,14 @@ Timeout: A 20-second timeout was added to handle slow network responses or serve
 3. Advanced Locators
 The output is not in a standard textarea. I used a relative locator to target the specific div holding the Sinhala result based on its proximity to the "Sinhala" heading.
 
-Project Structure
+📂 Project Structure
 tests/singlish_test.spec.ts: Contains the test logic and smart waiting mechanisms.
 
 testData.json: Stores all 34+ test cases including ID, Input, and Expected result.
 
 playwright.config.ts: Configured for Headed Mode, Screenshots, and Trace collection for easy debugging.
 
- How to Run
+🚀 How to Run
 Install dependencies: npm install
 
 Run tests: npx playwright test --project=chromium
